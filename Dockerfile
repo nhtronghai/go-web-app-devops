@@ -1,7 +1,8 @@
 #Multi-stage Dockerfile for Go web application
 
 #Golang Base Iamge
-FROM golang:1.23-alpine as builder      #Minimun version specified in go.mod is 1.22.5
+# Minimun version specified in go.mod is 1.22.5
+FROM golang:1.23-alpine as builder
 
 #Set the working directory inside the container
 WORKDIR /app
