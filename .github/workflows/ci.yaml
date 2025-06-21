@@ -7,7 +7,7 @@ on:
         paths-ignore:
             - .gitignore
             - README.md
-            - helm/go-web-app-chart
+            - helm/go-web-app-chart/values.yaml
 
 jobs:
     build-test:
