@@ -4,10 +4,10 @@ on:
     push:
         branches:
             - main
-        paths_ignore:
+        paths-ignore:
             - .gitignore
             - README.md
-            - helm/go-web-app-chart/
+            - helm/go-web-app-chart/values.yaml
 
 jobs:
     build-test:
