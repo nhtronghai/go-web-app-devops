@@ -70,4 +70,4 @@ jobs:
               with:
                 file: ./Dockerfile
                 push: true
-                tags: ${{ secrets.DOCKERHUB_USERNAME}}/go-web-app:${{ github.run_id}}
+                tags: ${{ secrets.DOCKER_USERNAME }}/go-web-app:${{ github.run_id}}
