@@ -1,0 +1,25 @@
+name: CI Pipeline for GOlang Project
+
+on:
+    push:
+        branches:
+            - main
+        paths_ignore:
+            - .gitignore
+            - README.md
+
+jobs:
+    build-test:
+        runs-on: ubuntu-latest
+        
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v2
+
+            - name: Set up Go
+              uses: actions/setup-go@v5
+              with:
+                go-version: '1.22.5'  # Specify the Go version you want to use
+            - run: |
+                 go version
+                 echo "Go version set up successfully."
