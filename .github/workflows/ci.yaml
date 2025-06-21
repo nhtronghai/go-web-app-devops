@@ -45,7 +45,7 @@ jobs:
               uses: actions/checkout@v2
 
             - name: Run go-lint
-              uses: golangci/golangci-lint-action@v6
+              uses: golangci/golangci-lint-action@v8
               with:
-                version: v1.56.2  # Specify the version of golangci-lint you want to use
+                version: v2.1  # Specify the version of golangci-lint you want to use
             
