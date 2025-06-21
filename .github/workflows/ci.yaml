@@ -23,3 +23,16 @@ jobs:
             - run: |
                  go version
                  echo "Go version set up successfully."
+
+            - name: Install Dependencies
+              run: |
+                go mod download
+                echo "Dependencies installed successfully."
+
+            - name: Build the Project
+              run: |
+                go build -o go-web-app .
+                echo "Project built successfully."
+
+            - name: Run Unit Tests
+              run: go test ./...
