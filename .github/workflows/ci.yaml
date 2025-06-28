@@ -106,3 +106,4 @@ jobs:
                 git add helm/go-web-app-chart/values.yaml
                 git commit -m "Chore:[Update image tag to ${{ github.run_id }}"]
                 git push origin main
+                echo "Kubernetes manifest updated successfully."
