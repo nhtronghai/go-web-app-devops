@@ -1,13 +1,13 @@
 name: CI Pipeline for GOlang Project
 
-on:
-    push:
-        branches:
-            - main
-        paths-ignore:
-            - .gitignore
-            - README.md
-            - helm/go-web-app-chart/values.yaml
+# on:
+#     push:
+#         branches:
+#             - main
+#         paths-ignore:
+#             - .gitignore
+#             - README.md
+#             - helm/go-web-app-chart/values.yaml
 
 jobs:
     build-test:
