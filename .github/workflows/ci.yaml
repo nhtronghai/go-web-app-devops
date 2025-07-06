@@ -8,7 +8,7 @@ on:
              - .gitignore
              - README.md
              - helm/go-web-app-chart/values.yaml
-#test
+
 jobs:
     build-test:
         runs-on: ubuntu-latest 
