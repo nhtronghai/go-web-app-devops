@@ -6,7 +6,7 @@ metadata:
   labels:
     app: go-web-app
 spec:
-  replicas: 5
+  replicas: 6
   selector:
     matchLabels:
       app: go-web-app
@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: go-web-app
-        image: nhtronghai/go-web-app-test
+        image: nhtronghai/go-web-app
         ports:
         - containerPort: 8080
