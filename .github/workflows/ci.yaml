@@ -101,8 +101,8 @@ jobs:
             - name: Update Kubernetes Manifest
               run: |
                 sed -i "s|tag: .*|tag: \"${{ github.run_id }}\"|g" helm/go-web-app-chart/values.yaml
-                git config --global user.name "Ramesh"
-                git config --global user.email "rameshpatil@gmail.com"
+                git config --global user.name "nhtronghai"
+                git config --global user.email "nhtronghai@gmail.com"
                 git add helm/go-web-app-chart/values.yaml
                 git commit -m "Chore:[Update image tag to ${{ github.run_id }}"]
                 git push origin main

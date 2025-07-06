@@ -1,0 +1,20 @@
+Install helm:
+helm install go-web-app . -f values.yaml
+
+Uninstall helm #Delete all k8s deployed resources
+helm uninstall go-web-app 
+
+Apply k8s NGINX Ingress Controller:
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.11.1/deploy/static/provider/aws/deploy.yaml
+
+Delete k8s NGINX Ingress C:
+
+kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.11.1/deploy/static/provider/aws/deploy.yaml
+
+
+root@Terraform-K8s-Worker:~/CICD-EKS-Golang/go-web-app-devops# kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 --decode && echo
+poaDUlPjJSn5cd5l
+
+kubectl get svc argocd-server -n argocd -> get DNS of ArgoCD
+kubectl get svc argocd-server -n argocd -o jsonpath='{.status.loadBalancer.ingress[0].hostname}'
+

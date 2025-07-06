@@ -4,6 +4,9 @@
 # Minimun version specified in go.mod is 1.22.5
 FROM golang:1.23-alpine as builder
 
+# 🔥 Explicitly compile for AMD64 (x86_64)
+#RUN GOOS=linux GOARCH=amd64 go build -o go-web-app .
+
 #Set the working directory inside the container
 WORKDIR /app
 
@@ -17,7 +20,7 @@ RUN go mod download
 COPY . .
 
 #Build the Go application 
-RUN go build -o go-web-app .
+RUN GOOS=linux GOARCH=amd64 go build -o go-web-app .
 
 ###########################################
 
